@@ -1,4 +1,4 @@
-'use-client';
+'use client';
 
 import {
   NumberedListIcon,
@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
 const sidebarNavigation = [
-  { name: 'All Bookings', href: '/dashboard/bookings', icon: NumberedListIcon },
+  { name: 'All Bookings', href: '/dashboard', icon: NumberedListIcon },
   { name: 'Rooms Details', href: '/dashboard/rooms', icon: HomeIcon },
   { name: 'Testimonials', href: '/dashboard/projects', icon: HandThumbUpIcon },
 ];

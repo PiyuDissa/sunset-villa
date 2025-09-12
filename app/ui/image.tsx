@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { ImageProps } from "../lib/definitions";
 
