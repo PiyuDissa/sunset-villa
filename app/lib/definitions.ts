@@ -5,3 +5,12 @@ export type ImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
 	height?: number;
 	className?: string;
 };
+
+export type allBookings = {
+	id: number;
+	full_name: string;
+	nic: string;
+	room_type: string;
+	booked_date: string;
+	status: 'paid' | 'pending';
+}

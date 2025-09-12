@@ -7,9 +7,8 @@ export default function SideNav() {
 			<Image 
 				src="/logo.webp"
 				alt="Sunset Villa Logo"
-				width={32}
-				height={32}
-				className="h-8 w-auto"/>
+				width={100}
+				height={20} />
 			<NavLinks />
 		</div> 
 	)
