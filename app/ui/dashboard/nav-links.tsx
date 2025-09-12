@@ -12,7 +12,7 @@ import clsx from 'clsx';
 const sidebarNavigation = [
   { name: 'All Bookings', href: '/dashboard', icon: NumberedListIcon },
   { name: 'Rooms Details', href: '/dashboard/rooms', icon: HomeIcon },
-  { name: 'Testimonials', href: '/dashboard/projects', icon: HandThumbUpIcon },
+  { name: 'Testimonials', href: '/dashboard/testimonial', icon: HandThumbUpIcon },
 ];
 
 export default function NavLinks() {

@@ -1,5 +1,5 @@
 import postgres from 'postgres';
-import {allBookings} from './definitions';
+import { allBookings, testimonials } from './definitions';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
@@ -25,4 +25,25 @@ export async function fetchAllBookingsById() {
 		console.error('Error fetching all bookings:', error);
 		throw new Error('Failed to fetch bookings.');
 	}	
+}
+
+export async function fetchTestimonials() {
+		try {
+		const data = await sql<testimonials[]>`
+		SELECT
+			"id",
+			"guest_name",
+			"submit_date",
+			"testimonial",
+			"rating"
+		FROM
+			"sunsetvilla_testimonials"
+		ORDER BY id
+			ASC
+		`;
+		return data;
+	} catch (error) {
+		console.error('Error fetching testimonials:', error);
+		throw new Error('Failed to fetch testimonials.');
+	}
 }

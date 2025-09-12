@@ -3,12 +3,16 @@ import { fetchAllBookingsById } from '@/app/lib/data';
 import { allBookings } from '@/app/lib/definitions';
 import BookingStatus  from '@/app/ui/all-bookings/status';
 import { formatDateToLocal } from '@/app/lib/utils';
+import clsx from 'clsx';
 
 export async function BookingsTable() {
 	const bookings = await fetchAllBookingsById();
-	const tdClassName = "whitespace-nowrap px-3 py-3 text-sm border-b border-gray-200";
+	const thClassName = "px-4 py-5 font-medium";
+	const tdClassName = "px-3 py-3 text-sm border-b border-gray-200";
+
 	return (
 		<>
+		<h2>Rooms Booking Details</h2>
 		 <div className="mt-6 flow-root">
 				<div className="inline-block min-w-full align-middle">
 					<div className="rounded-lg bg-gray-50 p-2 md:pt-0">
@@ -42,19 +46,19 @@ export async function BookingsTable() {
 						<table className="hidden min-w-full text-gray-900 md:table">
 							<thead className="rounded-lg text-left text-sm font-normal">
 								<tr>
-									<th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+									<th scope="col" className={clsx(thClassName, "sm:pl-6")}>
 										Customer
 									</th>
-									<th scope="col" className="px-3 py-5 font-medium">
+									<th scope="col" className={thClassName}>
 										NIC
 									</th>
-									<th scope="col" className="px-3 py-5 font-medium">
+									<th scope="col" className={thClassName}>
 										Room Type
 									</th>
-									<th scope="col" className="px-3 py-5 font-medium">
+									<th scope="col" className={thClassName}>
 										Date
 									</th>
-									<th scope="col" className="px-3 py-5 font-medium">
+									<th scope="col" className={thClassName}>
 										Status
 									</th>
 									<th scope="col" className="relative py-3 pl-6 pr-3">

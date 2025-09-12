@@ -14,3 +14,11 @@ export type allBookings = {
 	booked_date: string;
 	status: 'paid' | 'pending';
 }
+
+export type testimonials = {
+	id: number;
+	guest_name: string;
+	submit_date: string;
+	testimonial: string;
+	rating: number;
+}
