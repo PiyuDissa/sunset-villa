@@ -1,6 +1,5 @@
 
 import { fetchAllBookingsById } from '@/app/lib/data';
-import { allBookings } from '@/app/lib/definitions';
 import BookingStatus  from '@/app/ui/all-bookings/status';
 import { formatDateToLocal } from '@/app/lib/utils';
 import clsx from 'clsx';
