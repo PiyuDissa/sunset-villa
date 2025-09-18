@@ -68,7 +68,7 @@ export async function fetchAllRooms() {
 	}
 }
 
-let events = [
+const events = [
   { id: 1, eventName: 'Event 1', eventDescription: 'Lorem ipsum', eventDate: '2025-08-22' },
   { id: 2, eventName: 'Event 2', eventDescription: 'Lorem ipsum', eventDate: '2025-08-22' },
 ];
