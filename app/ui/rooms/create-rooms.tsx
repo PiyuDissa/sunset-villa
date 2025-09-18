@@ -58,7 +58,8 @@ export default function CreateRooms() {
 						<Input 
 							type="text" 
 							id="roomName" 
-							name="roomName" 
+							name="roomName"
+							placeholder="Room Name" 
 							required />
 					</div>
 					<div className='w-1/2 mb-5 pr-4'>

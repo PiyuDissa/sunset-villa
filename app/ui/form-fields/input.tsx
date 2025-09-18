@@ -1,12 +1,13 @@
 import { inputProps } from '@/app/lib/definitions';
 import clsx from 'clsx';
 
-export default function Input({ id, type, name, required, className  }: inputProps) {
+export default function Input({ id, type, placeholder, name, required, className  }: inputProps) {
 	return (
 		<>
 			<input
 				type={type}
 				id={id}
+				placeholder={placeholder}
 				name={name}
 				required={required}
 				className={clsx(

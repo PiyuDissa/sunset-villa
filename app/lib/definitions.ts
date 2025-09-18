@@ -40,6 +40,7 @@ export type inputProps = {
 	id: string;
   type: string;
   name: string;
+	placeholder?: string;
   required?: boolean;
   className?: string;
 }
@@ -62,3 +63,17 @@ export type buttonProps = {
   children: React.ReactNode;
   className?: string;
 }
+
+export type linkCardsProps = {
+	id: string; // Assuming 'id' comes from database rooms
+	title: string;
+	sub_title?: string;
+	description?: string;
+} & ImageProps; // linkCardsProps + ImageProps
+
+export type eventProps = {
+	id: number;
+	eventName: string;
+	eventDescription: string;
+	eventDate: string;
+};

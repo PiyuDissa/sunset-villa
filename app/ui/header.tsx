@@ -7,9 +7,9 @@ import Image from '@/app/ui/image';
 import clsx from 'clsx';
 
 const navigation = [
-  { name: 'Rooms', href: '#', current: false },
+  { name: 'Rooms', href: '/rooms', current: false },
   { name: 'Gallery', href: '#', current: false },
-  { name: 'Events', href: '#', current: false },
+  { name: 'Events', href: '/events', current: false },
 ]
 
 export default function header() {
