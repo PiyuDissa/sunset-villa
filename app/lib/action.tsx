@@ -4,6 +4,7 @@ import { z } from 'zod';
 import postgres from 'postgres';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
+import { addEventData } from '@/app/lib/data';
  
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
@@ -34,4 +35,18 @@ export async function createRooms(formData: FormData) {
 	console.log('Raw Form Data:', validatedData);
 	revalidatePath('/dashboard/rooms');
 	redirect('/dashboard/rooms');
+}
+
+export async function createEvent(formData: FormData) {
+  const newEvent = {
+    eventName: formData.get('eventName') as string,
+    eventDescription: formData.get('eventDescription') as string,
+    eventDate: formData.get('eventDate') as string,
+  };
+
+  // Use the central function to add the event
+  await addEventData(newEvent);
+
+  revalidatePath('/dashboard/events'); 
+  redirect('/dashboard/events');
 }

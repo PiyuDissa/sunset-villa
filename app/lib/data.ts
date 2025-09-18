@@ -67,3 +67,20 @@ export async function fetchAllRooms() {
 		throw new Error('Failed to fetch rooms.');
 	}
 }
+
+let events = [
+  { id: 1, eventName: 'Event 1', eventDescription: 'Lorem ipsum', eventDate: '2025-08-22' },
+  { id: 2, eventName: 'Event 2', eventDescription: 'Lorem ipsum', eventDate: '2025-08-22' },
+];
+
+// A function to get all events
+export async function getEventsData() {
+  return events;
+}
+
+// A function to add a new event
+export async function addEventData(newEvent: { eventName: string, eventDescription: string, eventDate: string }) {
+  const eventWithId = { id: events.length + 1, ...newEvent };
+  events.push(eventWithId);
+  return eventWithId;
+}

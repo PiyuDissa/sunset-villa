@@ -13,6 +13,7 @@ const sidebarNavigation = [
   { name: 'All Bookings', href: '/dashboard', icon: NumberedListIcon },
   { name: 'Rooms Details', href: '/dashboard/rooms', icon: HomeIcon },
   { name: 'Testimonials', href: '/dashboard/testimonial', icon: HandThumbUpIcon },
+  { name: 'Events', href: '/dashboard/events', icon: HomeIcon },
 ];
 
 export default function NavLinks() {
