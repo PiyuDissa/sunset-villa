@@ -14,7 +14,8 @@ export default function SideNav() {
 						src="/logo.webp"
 						alt="Sunset Villa Logo"
 						width={100}
-						height={20} />
+						height={20} 
+						loading="lazy"/>
         </div>
       </Link>
 			<div className="flex grow flex-row justify-start space-x-2 md:flex-col md:space-x-0 md:space-y-2">
