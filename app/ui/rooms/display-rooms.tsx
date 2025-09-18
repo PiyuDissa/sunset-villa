@@ -8,6 +8,7 @@ export async function DisplayRooms () {
 		<div>
 			{roomsDetails?.map((room) => (
 				<LinkCards
+					key={room.id}
 					src={room.id}
 					id={room.id}
 					title={room.room_type}
